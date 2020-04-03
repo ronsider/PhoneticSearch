@@ -25,8 +25,8 @@ TEST_CASE("word misspellings") {
 }
 
 TEST_CASE("long words cases") {
-    CHECK(find("pulchritudinous","fulcRITodinous") == string("pulchritudinous"));
-    CHECK(find("Consanguineous","Supercalifragilisticexpialidocious") == string("Consanguineous"));
+    CHECK(find("pulchritudinous","fulcHRITodinous") == string("pulchritudinous"));
+    CHECK(find("Consanguineous","CunsanJuineous") == string("Consanguineous"));
     CHECK(find("ToysRus","doyzrOZ")==string("ToysRus"));
     CHECK(find("superPHARM","sUBERFARM")==string("superPHARM"));
     CHECK(find("gugugaga","GUGUjAJA")==string("gugugaga"));
@@ -36,7 +36,7 @@ TEST_CASE("long words cases") {
     CHECK(find("hellogoodbye","HELLojoodPYe")==string("hellogoodbye"));
     CHECK(find("wikipedia","WIKifediA")==string("wikipedia"));
     CHECK(find("dinazour","tInaZOUR")==string("dinazour"));
-    CHECK(find("DOwNDLOAd","download")==string("DOwNDLOAd"));
+    CHECK(find("DOwNLOAd","download")==string("DOwNLOAd"));
     CHECK(find("update","UBDATE")==string("update"));
     CHECK(find("sharingisCARING","sharingyzkarinJ")==string("sharingisCARING"));
     CHECK(find("OPTICANA","uptikana")==string("OPTICANA"));
