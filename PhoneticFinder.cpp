@@ -19,11 +19,14 @@ string find(string text, string word)
 {
 
     if (word.length() == 0 || word == " ")
-        throw runtime_error("Did not find the word: '" + word );
+        throw runtime_error("word is missing: '" + word );
 
-    int i = 0,
-        j = 0;
+    
+    
     string ans = "";
+    int i ,j= 0;
+        
+    
 
     while (i <= text.length())
     {
@@ -43,8 +46,10 @@ string find(string text, string word)
         else if ((j < word.length()) && (criteria(text.at(i), word.at(j))))
         {
             ans += text.at(i);
-            i++;
+           
             j++;
+            
+             i++;
         }
         else
         {
@@ -60,9 +65,7 @@ string find(string text, string word)
             }
         }
     }
-
-    throw runtime_error("Did not find the word: '" + word );
-
+    throw runtime_error("word is miising: '" + word );
 } 
 
 /* doesnt matter if lower or uppercase*/
